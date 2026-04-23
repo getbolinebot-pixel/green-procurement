@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>綠色採購管理辦法｜形象版＋可維護版最終版</title>
+  <title>綠色採購管理辦法</title>
   <style>
     :root{
-      --bg:#f7f8f6;--card:#fff;--line:#e5e7eb;--text:#1f2937;--muted:#667085;
-      --green:#0f766e;--green-dark:#064e3b;--green-soft:#ecfdf5;--amber:#b45309;
-      --amber-soft:#fffbeb;--shadow:0 12px 36px rgba(15,23,42,.08);--radius:24px;--max:1200px;
+      --bg:#f6f8f7;--card:#fff;--line:#e5e7eb;--text:#1f2937;--muted:#667085;
+      --green:#0f766e;--green-dark:#064e3b;--green-soft:#ecfdf5;--yellow:#f59e0b;
+      --red:#ef4444;--yellow-soft:#fff7ed;--shadow:0 12px 36px rgba(15,23,42,.08);
+      --radius:24px;--max:1220px;
     }
     *{box-sizing:border-box} html{scroll-behavior:smooth}
     body{margin:0;font-family:"Microsoft JhengHei","Noto Sans TC",sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
     a{text-decoration:none;color:inherit} img{display:block;max-width:100%}
     .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}
-    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#064e3b 0%,#0f766e 55%,#0b8f85 100%);color:#fff;padding:30px 0 56px}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#064e3b 0%,#0f766e 58%,#12928a 100%);color:#fff;padding:30px 0 56px}
     .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(42px);opacity:.14}
     .hero:before{width:280px;height:280px;background:#fff;left:-80px;top:-80px}
     .hero:after{width:360px;height:360px;background:#bbf7d0;right:-80px;bottom:-100px}
@@ -37,33 +38,44 @@
     .nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 0}.nav a{font-size:14px;color:var(--muted);padding:8px 12px;border-radius:999px}
     .nav a:hover{background:#f3f4f6;color:var(--green-dark)}
     section{padding:24px 0}
-    .grid-2,.grid-3,.grid-4,.download,.intro{display:grid;gap:18px}
-    .intro{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)} .grid-4{grid-template-columns:repeat(4,1fr)}
+    .grid-2,.grid-3,.download,.intro{display:grid;gap:18px}
+    .intro{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)}
     .download{grid-template-columns:repeat(4,1fr)}
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
     .soft{background:#fafaf9}
     .tag{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--green-soft);color:var(--green);font-size:14px;font-weight:800}
     .title{font-size:32px;line-height:1.2;margin:14px 0 8px}.muted{color:var(--muted)}
-    .kpi{background:#fafaf9;border-radius:18px;padding:16px}.kpi .label{font-size:13px;color:var(--muted)} .kpi .value{font-size:30px;font-weight:900;margin-top:4px}
-    .chartWrap{margin-top:20px;border:1px solid var(--line);border-radius:18px;padding:18px}
-    .bars{display:grid;grid-template-columns:repeat(12,1fr);gap:10px;align-items:end;height:260px;margin-top:16px}
-    .pair{display:flex;justify-content:center;align-items:end;gap:6px;height:100%}.bar{width:18px;border-radius:10px 10px 0 0}.bar.total{background:#d6d3d1}.bar.green{background:#059669}
-    .month{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
-    .download a{display:block;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fafaf9;font-weight:800}
-    .download a:hover{border-color:#86efac;background:#f0fdf4;color:var(--green-dark)}
+    .quote{background:linear-gradient(90deg,#fffbeb,#fff7ed);border:1px solid #fde68a}
     .bullet{display:flex;gap:12px;align-items:flex-start;background:#fafaf9;border-radius:18px;padding:14px 16px;margin-top:12px}
     .num{width:30px;height:30px;border-radius:999px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;flex:0 0 30px;font-weight:800}
-    .quote{background:linear-gradient(90deg,#fffbeb,#fff7ed);border:1px solid #fde68a}
+    .item-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:18px}
+    .item-card{background:#fafaf9;border-radius:18px;padding:18px}
+    .item-card .name{font-size:18px;font-weight:900;color:#0f172a}
+    .item-card .amt{font-size:28px;font-weight:900;margin-top:6px}
+    .item-card .pct{font-size:14px;color:var(--muted);margin-top:6px}
+    .bars{display:grid;gap:12px;margin-top:18px}
+    .bar-row{display:grid;grid-template-columns:160px 1fr 80px;gap:12px;align-items:center}
+    .bar-track{height:14px;background:#edf2f0;border-radius:999px;overflow:hidden}
+    .bar-fill{height:100%;background:linear-gradient(90deg,#10b981,#0f766e);border-radius:999px}
+    .month{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
+    .traffic-wrap{display:grid;grid-template-columns:180px 1fr;gap:18px;align-items:center}
+    .traffic{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;padding:18px;border-radius:22px;background:#fafaf9;border:1px solid var(--line)}
+    .light{width:26px;height:26px;border-radius:50%;opacity:.25}
+    .light.red{background:var(--red)} .light.yellow{background:var(--yellow)} .light.green{background:#10b981}
+    .light.active{opacity:1}
+    .light.red.active{box-shadow:0 0 0 6px rgba(239,68,68,.12)}
+    .light.yellow.active{box-shadow:0 0 0 6px rgba(245,158,11,.12)}
+    .light.green.active{box-shadow:0 0 0 6px rgba(16,185,129,.12)}
+    .traffic-label{font-size:26px;font-weight:900}
+    .download a{display:block;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fafaf9;font-weight:800}
+    .download a:hover{border-color:#86efac;background:#f0fdf4;color:var(--green-dark)}
     .faq{border:1px solid var(--line);border-radius:18px;padding:18px 20px}.faq + .faq{margin-top:12px}
-    .ipwrap{display:grid;grid-template-columns:1fr .95fr;gap:18px;align-items:center}
-    .ipimg{border-radius:20px;overflow:hidden;border:1px solid #dbe4ea;background:#fff;box-shadow:var(--shadow)}
-    .note{margin-top:16px;padding:14px 16px;border-left:4px solid #f59e0b;background:var(--amber-soft);border-radius:12px;color:var(--amber)}
-    footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;margin-top:20px}
+    .note{margin-top:16px;padding:14px 16px;border-left:4px solid var(--yellow);background:var(--yellow-soft);border-radius:12px;color:#9a6700}
     @media (max-width:980px){
-      .hero-grid,.intro,.grid-2,.grid-3,.grid-4,.download,.ipwrap{grid-template-columns:1fr}
+      .hero-grid,.intro,.grid-2,.grid-3,.download,.item-grid,.traffic-wrap{grid-template-columns:1fr}
       .nav,.topbar{flex-direction:column;align-items:flex-start}
       .profile{grid-template-columns:100px 1fr}.profile img{width:100px;height:126px}
-      .bars{grid-template-columns:repeat(6,1fr);height:auto}
+      .bar-row{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -72,13 +84,13 @@
   <div class="container">
     <div class="topbar">
       <div class="brand">
-        <img src="./assets/logo.png" alt="公司 Logo">
+        <img src="./assets/logo.png" alt="公司 Logo" onerror="this.style.display='none';">
         <div>
           <div style="font-size:13px;color:#d1fae5">內部制度展示入口</div>
           <div style="font-size:16px;font-weight:900">綠色採購管理辦法</div>
         </div>
       </div>
-      <div style="font-size:13px;color:#d1fae5">形象版＋可維護版最終版</div>
+      <div style="font-size:13px;color:#d1fae5">正式展示頁</div>
     </div>
 
     <div class="hero-grid">
@@ -87,13 +99,13 @@
         <h1 id="siteTitle">載入中…</h1>
         <div class="lead" id="siteSubtitle">載入中…</div>
         <div class="actions">
-          <a class="btn btn-primary" href="#dashboard">先看 KPI 儀表板</a>
+          <a class="btn btn-primary" href="#kpi">先看重點</a>
           <a class="btn btn-outline" href="#downloads">查看附件下載</a>
         </div>
       </div>
       <div class="hero-side">
         <div class="profile">
-          <img src="./assets/portrait.jpg" alt="形象照">
+          <img src="./assets/portrait.jpg" alt="形象照" onerror="this.outerHTML='<div style=&quot;width:128px;height:160px;border-radius:18px;border:2px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12)&quot;></div>'">
           <div>
             <div id="ownerName" style="font-size:22px;font-weight:900">載入中…</div>
             <div id="ownerRole" style="font-size:14px;color:#d1fae5">載入中…</div>
@@ -101,10 +113,10 @@
           </div>
         </div>
         <div class="statgrid">
-          <div class="stat"><div class="k">總採購金額</div><div class="v" id="heroTotal">-</div></div>
-          <div class="stat"><div class="k">綠色占比</div><div class="v" id="heroRatio">-</div></div>
-          <div class="stat"><div class="k">供應商數</div><div class="v" id="heroSuppliers">-</div></div>
-          <div class="stat"><div class="k">例外件數</div><div class="v" id="heroExceptions">-</div></div>
+          <div class="stat"><div class="k">綠色品項總金額</div><div class="v" id="heroTotal">-</div></div>
+          <div class="stat"><div class="k">納入品項類別數</div><div class="v" id="heroCategoryCount">-</div></div>
+          <div class="stat"><div class="k">最高占比品項</div><div class="v" id="heroTopCategory">-</div></div>
+          <div class="stat"><div class="k">年度達成燈號</div><div class="v" id="heroStatus">-</div></div>
         </div>
       </div>
     </div>
@@ -113,10 +125,10 @@
 
 <nav>
   <div class="container nav">
-    <div style="font-weight:900;color:#064e3b">綠色採購管理辦法｜最終部署版</div>
+    <div style="font-weight:900;color:#064e3b">綠色採購管理辦法</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <a href="#dashboard">KPI</a>
-      <a href="#core">制度核心</a>
+      <a href="#kpi">品項占比</a>
+      <a href="#core">核心重點</a>
       <a href="#workflow">流程</a>
       <a href="#downloads">附件下載</a>
       <a href="#ai">AI 建議</a>
@@ -127,35 +139,39 @@
 
 <main class="container">
   <section class="intro">
-    <div class="card"><div style="font-size:20px;font-weight:900;color:#064e3b">向上說明</div><div style="margin-top:8px">用管理效益、標案優勢、驗收風險與申報能力，清楚說明制度為何現在就要做。</div></div>
-    <div class="card"><div style="font-size:20px;font-weight:900;color:#064e3b">對內展示</div><div style="margin-top:8px">把條文化內容轉成流程化頁面與角色分工，讓各部門理解自己要做哪些必要動作。</div></div>
-    <div class="card"><div style="font-size:20px;font-weight:900;color:#064e3b">教育訓練</div><div style="margin-top:8px">把請購、主管、財務與採購窗口需要知道的重點濃縮成可直接教學的內容。</div></div>
+    <div class="card"><div style="font-size:20px;font-weight:900;color:#064e3b">向上說明</div><div style="margin-top:8px">將制度、附件與申報數據整合為同一平台，讓管理層以單一入口快速掌握執行狀況。</div></div>
+    <div class="card"><div style="font-size:20px;font-weight:900;color:#064e3b">對內展示</div><div style="margin-top:8px">把條文化內容轉成流程與品項結構，降低跨部門理解落差與執行落差。</div></div>
+    <div class="card"><div style="font-size:20px;font-weight:900;color:#064e3b">教育訓練</div><div style="margin-top:8px">將請購、主管、財務與採購窗口的任務具體化，利於宣導與持續追蹤。</div></div>
   </section>
 
-  <section id="dashboard" class="grid-2">
+  <section id="kpi" class="grid-2">
     <div class="card">
       <div class="tag">KPI 儀表板</div>
-      <div class="title">採購比例與綠色占比</div>
-      <div class="grid-2" style="margin-top:16px">
-        <div class="kpi"><div class="label">總採購金額</div><div class="value" id="totalAmount">-</div></div>
-        <div class="kpi"><div class="label">綠色採購金額</div><div class="value" id="greenAmount">-</div></div>
-        <div class="kpi"><div class="label">綠色占比</div><div class="value" id="greenRatio">-</div></div>
-        <div class="kpi"><div class="label">例外件數</div><div class="value" id="exceptionCount">-</div></div>
-      </div>
-      <div class="chartWrap">
-        <div style="font-weight:900">台帳自動圖表（由 ledger-data.csv 產生）</div>
-        <div class="bars" id="bars"></div>
-        <div class="note">只要用 Excel 打開 ledger-data.csv，修改月份資料後存回原檔，再重新部署，圖表就會更新。</div>
-      </div>
+      <div class="title">綠色採購品項占比</div>
+      <div class="muted">用品項結構而非單純金額呈現，快速掌握目前綠色採購重點集中在哪些類別。</div>
+      <div class="item-grid" id="itemCards"></div>
+      <div class="bars" id="itemBars"></div>
+      <div class="note">年度觀察邏輯：扣除高鐵交通後，其餘綠色品項採購金額若低於 10 萬亮紅燈；低於 25 萬亮黃燈；達 25 萬以上亮綠燈。</div>
     </div>
 
     <div class="card quote" id="core">
-      <div class="tag" style="background:#fff3c4;color:#8a5a00">主管一句話版本</div>
-      <div class="title" id="managerQuote">載入中…</div>
-      <div class="muted" style="color:#7c5a05">核心不是要求大家全面更換採購方式，而是在既有流程裡，補上「優先選綠、佐證留存、例外可簽核」三個管理動作。</div>
-      <div class="bullet"><div class="num">1</div><div><strong>不改集權</strong><br>維持分散採購現況，不強制全面集中採購。</div></div>
-      <div class="bullet"><div class="num">2</div><div><strong>欄位化控管</strong><br>以最少必要欄位完成辨識與留存，不額外堆疊繁瑣表單。</div></div>
-      <div class="bullet"><div class="num">3</div><div><strong>抽核取代重流程</strong><br>以季彙整、抽核與例外簽核，取代全面加重行政成本。</div></div>
+      <div class="tag" id="coreTitle">核心重點</div>
+      <div class="title" id="managerSummary">載入中…</div>
+      <div class="muted" style="color:#7c5a05">建議優先關注三件事：綠色品項是否持續擴充、品項結構是否過度集中、扣除高鐵後其他綠色採購是否能逐步達到年度 40 萬目標。</div>
+      <div class="traffic-wrap" style="margin-top:18px">
+        <div class="traffic">
+          <div class="light red" id="lightRed"></div>
+          <div class="light yellow" id="lightYellow"></div>
+          <div class="light green" id="lightGreen"></div>
+          <div class="traffic-label" id="trafficText">-</div>
+          <div class="muted" id="trafficAmount">-</div>
+        </div>
+        <div>
+          <div class="bullet"><div class="num">1</div><div><strong>綠燈</strong><br>扣除高鐵後其他綠色品項金額達 25 萬以上，代表結構與金額基礎已具規模。</div></div>
+          <div class="bullet"><div class="num">2</div><div><strong>黃燈</strong><br>扣除高鐵後其他綠色品項金額介於 10 萬至 25 萬以下，代表仍需持續擴充採購項目。</div></div>
+          <div class="bullet"><div class="num">3</div><div><strong>紅燈</strong><br>扣除高鐵後其他綠色品項金額低於 10 萬，代表制度落地與實際採購仍需加強。</div></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -176,18 +192,6 @@
     </div>
   </section>
 
-  <section class="ipwrap">
-    <div class="card">
-      <div class="tag">形象整合</div>
-      <div class="title">制度網站也保有你的個人 IP 風格</div>
-      <div class="muted">這個版本已納入形象照、個人 IP 視覺與公司 Logo，讓制度網站不只是文件入口，也能成為對內分享時更有辨識度的展示頁。</div>
-      <div class="bullet"><div class="num">A</div><div>首頁放入制度推動者形象，提升內部溝通與認同感。</div></div>
-      <div class="bullet"><div class="num">B</div><div>可延伸成簡報、海報、教育訓練圖卡的統一視覺。</div></div>
-      <div class="bullet"><div class="num">C</div><div>之後也可加入更多角色插圖，做成完整品牌化版本。</div></div>
-    </div>
-    <div class="ipimg"><img src="./assets/ip.jpg" alt="個人 IP 視覺素材"></div>
-  </section>
-
   <section id="downloads" class="card">
     <div class="tag">附件下載按鈕</div>
     <div class="title">雲端整合入口</div>
@@ -205,7 +209,7 @@
     <div class="title">接入你的 AI 工具</div>
     <div class="grid-2">
       <div>
-        <div class="muted">你可將這裡連到前面做好的 AI 工具頁，作為採購前判斷入口，例如：</div>
+        <div class="muted">你可將這裡連到既有 AI 工具頁，作為採購前判斷入口，例如：</div>
         <div class="bullet"><div class="num">A</div><div>是否屬綠色採購品項</div></div>
         <div class="bullet"><div class="num">B</div><div>需不需要補證書或佐證文件</div></div>
         <div class="bullet"><div class="num">C</div><div>是否應走例外／偏離申請</div></div>
@@ -221,49 +225,39 @@
   <section id="faq" class="card">
     <div class="tag">FAQ</div>
     <div class="title">主管與同仁常見問題</div>
-    <div class="faq"><strong>Q1. 綠色採購是不是一定更貴？</strong><br>A. 不是。制度原則是在價格、功能與交期相近條件下優先選用可申報品項；若價差過高，可走例外評估。</div>
-    <div class="faq"><strong>Q2. 公司是否需要改成集中採購？</strong><br>A. 不需要。本制度保留原有分散採購模式，只在既有作業中補上必要控管點。</div>
-    <div class="faq"><strong>Q3. 最重要的兩個控制點是什麼？</strong><br>A. 第一，證書有效期必須涵蓋下訂日期；第二，付款與歸檔時必須附上可查證佐證。</div>
+    <div class="faq"><strong>Q1. 為什麼 KPI 要改看品項占比？</strong><br>A. 因為品項結構更能反映制度是否真正落地，而不只是年度採購金額大小。</div>
+    <div class="faq"><strong>Q2. 為什麼要扣除高鐵再看燈號？</strong><br>A. 因為高鐵屬較固定且常態性支出，若不扣除，容易掩蓋其他綠色採購品項的實際推動成果。</div>
+    <div class="faq"><strong>Q3. 未來如何維護？</strong><br>A. 直接用 Excel 編輯 item-share-data.csv，或修改 site-config.json 後推送 GitHub，網站會自動更新。</div>
   </section>
 </main>
-
-<footer>
-  <div class="container">綠色採購管理辦法｜形象版＋可維護版最終版｜建議搭配 Excel 維護檔、附件雲端連結與 AI 工具頁共同使用</div>
-</footer>
 
 <script>
 const fallbackConfig = {
   siteTitle: "一頁式綠色採購管理網站",
-  siteSubtitle: "將制度精神、作業流程、附件表單、例外管理、教育訓練、KPI 儀表板與 AI 採購建議整合為單一網頁，協助主管快速理解、同仁快速上手。",
-  heroBadge: "向上說明・對內展示・教育訓練・KPI 儀表板・可持續維護",
-  managerQuote: "這不是多一套制度，而是把原本支出變得可申報、可查證、可被說明。",
-  ownerName: "林曉君",
-  ownerRole: "綠色採購制度推動／內部宣導窗口",
-  ownerIntro: "將辦法草案、附件表單、教育訓練內容與數據管理整合為可展示、可分享、可持續優化的制度網站。",
+  siteSubtitle: "整合制度、數據與 AI 輔助決策，提升綠色採購透明度、執行效率與稽核可追溯性。",
+  heroBadge: "制度整合・對上說明・KPI 儀表板・持續優化",
+  sectionCoreTitle: "核心重點",
+  managerSummary: "本平台將原本分散的制度、附件與台帳，轉為可視化管理工具，協助管理層快速掌握綠色採購結構、執行狀況與後續優化方向。",
+  ownerName: "GADM-BO 曉君",
+  ownerRole: "綠色採購制度推動 / 內部宣導窗口",
+  ownerIntro: "負責整合辦法草案、附件表單、教育訓練與申報數據，讓制度從文件管理升級為管理決策工具。",
   aiToolName: "AI 採購建議工具",
   aiToolUrl: "#",
-  kpis: { totalAmount: 1280000, greenAmount: 896000, greenRatio: 70, supplierCount: 18, exceptionCount: 5 },
-  attachmentLinks: { A:"#", B:"#", C:"#", D:"#"}
+  attachmentLinks: { A:"#", B:"#", C:"#", D:"#"},
+  trafficLightRule: { exclude_categories: ["高鐵交通"], red_below: 100000, yellow_below: 250000 }
 };
-const fallbackCsv = `month,total,green
-1月,120000,78000
-2月,98000,65000
-3月,135000,94000
-4月,168000,121000
-5月,142000,98000
-6月,156000,112000
-7月,148000,105000
-8月,159000,114000
-9月,166000,121000
-10月,173000,126000
-11月,182000,134000
-12月,191000,142000`;
+const fallbackCsv = `category,amount,note
+FSC 紙類,22536,依申報資料可辨識之 FSC 衛生紙
+租賃設備,50712,資訊產品-影印機與印表機租賃金額
+高鐵交通,18000,示範值
+節能設備,12000,示範值
+其他環保標章,9000,示範值`;
 
 function parseCsv(text){
   const lines = text.trim().split(/\r?\n/);
   return lines.slice(1).map(line => {
     const cols = line.split(",");
-    return { month: cols[0], total: Number(cols[1]), green: Number(cols[2]) };
+    return { category: cols[0], amount: Number(cols[1]), note: cols.slice(2).join(",") };
   });
 }
 function money(n){ return "NT$ " + Number(n).toLocaleString("zh-Hant-TW"); }
@@ -272,18 +266,11 @@ function renderConfig(cfg){
   document.getElementById("siteTitle").textContent = cfg.siteTitle;
   document.getElementById("siteSubtitle").textContent = cfg.siteSubtitle;
   document.getElementById("heroBadge").textContent = cfg.heroBadge;
-  document.getElementById("managerQuote").textContent = cfg.managerQuote;
+  document.getElementById("coreTitle").textContent = cfg.sectionCoreTitle;
+  document.getElementById("managerSummary").textContent = cfg.managerSummary;
   document.getElementById("ownerName").textContent = cfg.ownerName;
   document.getElementById("ownerRole").textContent = cfg.ownerRole;
   document.getElementById("ownerIntro").textContent = cfg.ownerIntro;
-  document.getElementById("totalAmount").textContent = money(cfg.kpis.totalAmount);
-  document.getElementById("greenAmount").textContent = money(cfg.kpis.greenAmount);
-  document.getElementById("greenRatio").textContent = cfg.kpis.greenRatio + "%";
-  document.getElementById("exceptionCount").textContent = cfg.kpis.exceptionCount;
-  document.getElementById("heroTotal").textContent = money(cfg.kpis.totalAmount);
-  document.getElementById("heroRatio").textContent = cfg.kpis.greenRatio + "%";
-  document.getElementById("heroSuppliers").textContent = cfg.kpis.supplierCount;
-  document.getElementById("heroExceptions").textContent = cfg.kpis.exceptionCount;
   document.getElementById("linkA").href = cfg.attachmentLinks.A;
   document.getElementById("linkB").href = cfg.attachmentLinks.B;
   document.getElementById("linkC").href = cfg.attachmentLinks.C;
@@ -294,22 +281,48 @@ function renderConfig(cfg){
   btn.textContent = "前往 " + cfg.aiToolName;
 }
 
-function renderBars(rows){
-  const wrap = document.getElementById("bars");
-  wrap.innerHTML = "";
-  const maxTotal = Math.max(...rows.map(r => r.total), 1);
-  rows.forEach(r => {
-    const totalH = Math.round((r.total / maxTotal) * 180);
-    const greenH = Math.round((r.green / maxTotal) * 180);
-    const item = document.createElement("div");
-    item.innerHTML = `
-      <div class="pair">
-        <div><div class="bar total" style="height:${totalH}px"></div><div class="month">${r.month}</div></div>
-        <div><div class="bar green" style="height:${greenH}px"></div><div class="month">綠</div></div>
-      </div>
-    `;
-    wrap.appendChild(item);
+function renderItems(rows, cfg){
+  const total = rows.reduce((s,r) => s + (Number.isFinite(r.amount) ? r.amount : 0), 0);
+  const sorted = [...rows].sort((a,b)=>b.amount-a.amount);
+  const cards = document.getElementById("itemCards");
+  const bars = document.getElementById("itemBars");
+  cards.innerHTML = "";
+  bars.innerHTML = "";
+  sorted.forEach(r => {
+    const pct = total ? (r.amount / total * 100) : 0;
+    const c = document.createElement("div");
+    c.className = "item-card";
+    c.innerHTML = `<div class="name">${r.category}</div><div class="amt">${money(r.amount)}</div><div class="pct">占比 ${pct.toFixed(1)}%｜${r.note || ""}</div>`;
+    cards.appendChild(c);
+
+    const b = document.createElement("div");
+    b.className = "bar-row";
+    b.innerHTML = `<div>${r.category}</div><div class="bar-track"><div class="bar-fill" style="width:${pct.toFixed(1)}%"></div></div><div>${pct.toFixed(1)}%</div>`;
+    bars.appendChild(b);
   });
+
+  document.getElementById("heroTotal").textContent = money(total);
+  document.getElementById("heroCategoryCount").textContent = sorted.filter(r=>r.amount>0).length;
+  document.getElementById("heroTopCategory").textContent = sorted[0] ? sorted[0].category : "-";
+
+  const excludes = cfg.trafficLightRule?.exclude_categories || [];
+  const nonTrafficTotal = sorted
+    .filter(r => !excludes.includes(r.category))
+    .reduce((s,r) => s + r.amount, 0);
+
+  const redBelow = Number(cfg.trafficLightRule?.red_below ?? 100000);
+  const yellowBelow = Number(cfg.trafficLightRule?.yellow_below ?? 250000);
+
+  let status = "紅燈", target = "lightRed";
+  if(nonTrafficTotal < redBelow){ status = "紅燈"; target = "lightRed"; }
+  else if(nonTrafficTotal < yellowBelow){ status = "黃燈"; target = "lightYellow"; }
+  else { status = "綠燈"; target = "lightGreen"; }
+
+  document.getElementById("heroStatus").textContent = status;
+  document.getElementById("trafficText").textContent = status;
+  document.getElementById("trafficAmount").textContent = "扣除高鐵後：" + money(nonTrafficTotal);
+  ["lightRed","lightYellow","lightGreen"].forEach(id => document.getElementById(id).classList.remove("active"));
+  document.getElementById(target).classList.add("active");
 }
 
 async function boot(){
@@ -317,14 +330,14 @@ async function boot(){
   let csvText = fallbackCsv;
   try {
     const r1 = await fetch("./site-config.json");
-    if (r1.ok) cfg = await r1.json();
+    if(r1.ok) cfg = await r1.json();
   } catch(e) {}
   try {
-    const r2 = await fetch("./ledger-data.csv");
-    if (r2.ok) csvText = await r2.text();
+    const r2 = await fetch("./item-share-data.csv");
+    if(r2.ok) csvText = await r2.text();
   } catch(e) {}
   renderConfig(cfg);
-  renderBars(parseCsv(csvText));
+  renderItems(parseCsv(csvText), cfg);
 }
 boot();
 </script>

@@ -1,24 +1,25 @@
 {
   "siteTitle": "一頁式綠色採購管理網站",
-  "siteSubtitle": "將制度精神、作業流程、附件表單、例外管理、教育訓練、KPI 儀表板與 AI 採購建議整合為單一網頁，協助主管快速理解、同仁快速上手。",
-  "heroBadge": "向上說明・對內展示・教育訓練・KPI 儀表板・可持續維護",
-  "managerQuote": "這不是多一套制度，而是把原本支出變得可申報、可查證、可被說明。",
-  "ownerName": "林曉君",
-  "ownerRole": "綠色採購制度推動／內部宣導窗口",
-  "ownerIntro": "將辦法草案、附件表單、教育訓練內容與數據管理整合為可展示、可分享、可持續優化的制度網站。",
+  "siteSubtitle": "整合制度、數據與 AI 輔助決策，提升綠色採購透明度、執行效率與稽核可追溯性。",
+  "heroBadge": "制度整合・對上說明・KPI 儀表板・持續優化",
+  "sectionCoreTitle": "核心重點",
+  "managerSummary": "本平台將原本分散的制度、附件與台帳，轉為可視化管理工具，協助管理層快速掌握綠色採購結構、執行狀況與後續優化方向。",
+  "ownerName": "GADM-BO 曉君",
+  "ownerRole": "綠色採購制度推動 / 內部宣導窗口",
+  "ownerIntro": "負責整合辦法草案、附件表單、教育訓練與申報數據，讓制度從文件管理升級為管理決策工具。",
   "aiToolName": "AI 採購建議工具",
   "aiToolUrl": "https://example.com/ai-tool",
-  "kpis": {
-    "totalAmount": 1280000,
-    "greenAmount": 896000,
-    "greenRatio": 70,
-    "supplierCount": 18,
-    "exceptionCount": 5
-  },
   "attachmentLinks": {
     "A": "https://example.com/A",
     "B": "https://example.com/B",
     "C": "https://example.com/C",
     "D": "https://example.com/D"
+  },
+  "trafficLightRule": {
+    "exclude_categories": [
+      "高鐵交通"
+    ],
+    "red_below": 100000,
+    "yellow_below": 250000
   }
 }
