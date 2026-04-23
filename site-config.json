@@ -1,0 +1,24 @@
+{
+  "siteTitle": "一頁式綠色採購管理網站",
+  "siteSubtitle": "將制度精神、作業流程、附件表單、例外管理、教育訓練、KPI 儀表板與 AI 採購建議整合為單一網頁，協助主管快速理解、同仁快速上手。",
+  "heroBadge": "向上說明・對內展示・教育訓練・KPI 儀表板・可持續維護",
+  "managerQuote": "這不是多一套制度，而是把原本支出變得可申報、可查證、可被說明。",
+  "ownerName": "林曉君",
+  "ownerRole": "綠色採購制度推動／內部宣導窗口",
+  "ownerIntro": "將辦法草案、附件表單、教育訓練內容與數據管理整合為可展示、可分享、可持續優化的制度網站。",
+  "aiToolName": "AI 採購建議工具",
+  "aiToolUrl": "https://example.com/ai-tool",
+  "kpis": {
+    "totalAmount": 1280000,
+    "greenAmount": 896000,
+    "greenRatio": 70,
+    "supplierCount": 18,
+    "exceptionCount": 5
+  },
+  "attachmentLinks": {
+    "A": "https://example.com/A",
+    "B": "https://example.com/B",
+    "C": "https://example.com/C",
+    "D": "https://example.com/D"
+  }
+}
